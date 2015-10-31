@@ -1,0 +1,6 @@
+import json
+
+with open("co-occurence table.json") as inp:
+	j = json.load(inp)
+
+print j

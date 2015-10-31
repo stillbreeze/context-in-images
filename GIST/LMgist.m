@@ -1,6 +1,6 @@
 function [gist, param] = LMgist(D, HOMEIMAGES, param, HOMEGIST)
 %
-% [gist, param] = LMgist(D, HOMEIMAGES, param);
+% [gist, param] = LMgist(D, HOMEIMAGES, param
 % [gist, param] = LMgist(filename, HOMEIMAGES, param);
 % [gist, param] = LMgist(filename, HOMEIMAGES, param, HOMEGIST);
 %
@@ -130,6 +130,9 @@ for n = 1:Nscenes
 
         % get gist:
         g = gistGabor(output, param);
+%         fId = fopen('C:\Users\ashar\Desktop\Matlab files\Minor\GIST\gistFeature.txt','a+');
+%         fprintf(fId,'%.4f\t',g);
+%         fclose(fId);
         figure;
         imshow(output);
         
@@ -333,16 +336,46 @@ end
 
 
 
-% Load image
-img = imread('d.jpg');
-imshow(img);
+% %Load image
+% img = imread('x.jpg');
+% % imshow(img);
+% 
+% %GIST Parameters:
+% clear param
+% param.orientationsPerScale = [8 8 8 8]; % number of orientations per scale (from HF to LF)
+% param.numberBlocks = 8;
+% param.fc_prefilt = 8;
+% 
+% %Computing gist:
+% [gist, param] = LMgist(img, '', param);
 
-% GIST Parameters:
-clear param
-param.orientationsPerScale = [8 8 8 8]; % number of orientations per scale (from HF to LF)
-param.numberBlocks = 4;
-param.fc_prefilt = 4;
 
-% Computing gist:
-[gist, param] = LMgist(img, '', param);
+
+%  % GIST Parameters:
+% clear param
+% param.imageSize = [256 256]; % set a normalized image size
+% param.orientationsPerScale = [8 8 8 8]; % number of orientations per scale (from HF to LF)
+% param.numberBlocks = 16;
+% param.fc_prefilt = 16;
+% 
+% % Pre-allocate gist:
+% folder = 'C:\Users\ashar\Desktop\Matlab files\Minor\GIST\train2014';
+% filePattern = fullfile(folder, '*.jpg');
+% srcFiles = dir(filePattern);
+% Nimages = length(srcFiles);
+% Nfeatures = sum(param.orientationsPerScale)*param.numberBlocks^2;
+% gist = zeros([Nimages Nfeatures]); 
+% 
+% % Load first image and compute gist:
+% img = imread('C:\Users\ashar\Desktop\Matlab files\Minor\GIST\train2014\COCO_train2014_000000000009.jpg');
+% [gist(1, :), param] = LMgist(img, '', param); % first call
+% count=1;
+% % Loop:
+% for i = 2:Nimages
+%    count=count+1;
+%    disp(count);
+%    filename = strcat('C:\Users\ashar\Desktop\Matlab files\Minor\GIST\train2014\',srcFiles(i).name);
+%    img = imread(filename);
+%    gist(i, :) = LMgist(img, '', param); % the next calls will be faster
+% end
 

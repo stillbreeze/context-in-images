@@ -1,0 +1,13 @@
+Chosen objects				Super categories
+
+bicycle + car 				=> vehicle
+traffic light + bench 		=> outdoor
+cat + elephant 				=> animal
+umbrella + handbag 			=> accessory
+sports ball + skateboard 	=> sports
+wine glass + bowl 			=> kitchen
+sandwich + pizza 			=> food
+chair + bed 				=> furniture
+tv + laptop 				=> electronic
+refrigerator + oven 		=> appliance
+clock + teddy bear 			=> indoor
