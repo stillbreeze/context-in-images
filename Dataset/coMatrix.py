@@ -7,7 +7,7 @@ def pairwise(iterable):
     return izip(a, b)
 
 matrix=[[0 for i in range(0,91)]for j in range(0,91)]
-with open("co-occurence table.json") as inp:
+with open("labels.json") as inp:
 	j = json.load(inp)
 
 for i in j:

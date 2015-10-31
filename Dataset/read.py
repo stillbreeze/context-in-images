@@ -10,7 +10,13 @@ arr=[0 for i in range(91)]
 for i in j['annotations']:
 	arr[i['category_id']]+=1
 
-print arr
+#print arr
+
+maxi=9999999999999
+for i in j['images']:
+	if i['id']==9:
+		print i
+
 
 # res = []
 # for i in range(c):

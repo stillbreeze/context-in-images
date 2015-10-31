@@ -11,6 +11,6 @@ for i in j['annotations']:
 	table[i['image_id']].append(i['category_id'])
 
 
-with open('co-occurence table.txt', 'w') as outfile:
+with open('labels.json', 'w') as outfile:
     json.dump(table, outfile)
-# print table
+

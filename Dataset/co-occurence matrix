@@ -1,6 +1,6 @@
 import json
 
-with open("co-occurence table.json") as inp:
+with open("labels.json") as inp:
 	j = json.load(inp)
 
 print j
