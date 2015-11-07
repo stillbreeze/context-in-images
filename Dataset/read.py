@@ -11,12 +11,12 @@ for i in j['annotations']:
 	arr[i['category_id']]+=1
 
 #print arr
-
-maxi=9999999999999
+print j['images'][0].keys()
 for i in j['images']:
-	if i['id']==9:
+	if i['id']==520259:
 		print i
 
+print 'done'
 
 # res = []
 # for i in range(c):

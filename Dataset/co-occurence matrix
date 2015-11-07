@@ -1,6 +1,0 @@
-import json
-
-with open("labels.json") as inp:
-	j = json.load(inp)
-
-print j

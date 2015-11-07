@@ -355,8 +355,8 @@ end
 % clear param
 % param.imageSize = [256 256]; % set a normalized image size
 % param.orientationsPerScale = [8 8 8 8]; % number of orientations per scale (from HF to LF)
-% param.numberBlocks = 16;
-% param.fc_prefilt = 16;
+% param.numberBlocks = 8;
+% param.fc_prefilt = 8;
 % 
 % % Pre-allocate gist:
 % folder = 'C:\Users\ashar\Desktop\Matlab files\Minor\GIST\train2014';
