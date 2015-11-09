@@ -1,0 +1,6 @@
+Things to try:
+
+1. Train the network with supercategories instead of categories and then think of bringing in spatial filters
+2. Change the architecture; vary number of hidden neurons, go deep, try different activation units and loss functions.
+3. Try batch learning for using the complete dataset
+4. Think of 'the big idea' to integrate spatial and co-occurence info as an input vector for a CNN
