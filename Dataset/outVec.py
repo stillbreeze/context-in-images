@@ -11,5 +11,5 @@ for i,j in labels.iteritems():
 		temp[k]=1
 	ovec[i]=temp
 
-with open('outLayer.json', 'w') as outfile:
+with open('outVec.json', 'w') as outfile:
     json.dump(ovec, outfile)

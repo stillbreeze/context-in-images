@@ -7,17 +7,10 @@ with open("instances_train2014.json") as inp:
 # print c
 arr=[0 for i in range(91)]
 
-for i in j['annotations']:
-	arr[i['category_id']]+=1
+# for i in j['annotations']:
+# 	arr[i['category_id']]+=1
 
-#print arr
-print j['images'][0].keys()
-for i in j['images']:
-	if i['id']==520259:
-		print i
-
-print 'done'
-
+print j['annotations'][0]
 # res = []
 # for i in range(c):
 #  	res.append( j['categories'][i]['name'] + "   Category id: " + str(j['categories'][i]['id']) + "   Count: " + str(arr[i+1]) )

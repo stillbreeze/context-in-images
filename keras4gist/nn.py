@@ -46,7 +46,7 @@ print 'Input testing vector: ' + str(X_test.shape)
 print 'Input predicting vector: ' + str(X_predict.shape)
 
 
-with open("outVec.json") as inp:
+with open("outVec2.json") as inp:
 	j = json.load(inp)
 
 x=sorted(j)
@@ -65,8 +65,8 @@ print 'Output predicting vector: ' + str(Y_predict.shape)
 
 
 batch_size = 32
-nb_epoch = 10
-nb_classes = 90
+nb_epoch = 6
+nb_classes = 12
 
 print("Building model...")
 model = Sequential()
@@ -86,12 +86,19 @@ print('Test score:', score[0])
 print('Test accuracy:', score[1])
 
 print 'Activations:'
-print activations
+print activations[0]
+print activations[1]
+print activations[2]
+print activations[3]
 print '\n\n'
 
 print 'Actual results:'
-print t[42000:42200]
-print '\n\n'
+print t[42000]
+print t[42001]
+print t[42002]
+print t[42003]
+
+print '\n\n\n\n\n\n'
 
 temp=[]
 print 'Activations of ON labels:'
@@ -100,4 +107,3 @@ for x,i in enumerate(t[42000:42200]):
 		if j==1:
 			temp.append(activations[x][y])
 
-print temp
