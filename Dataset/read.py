@@ -10,7 +10,27 @@ arr=[0 for i in range(91)]
 # for i in j['annotations']:
 # 	arr[i['category_id']]+=1
 
-print j['annotations'][0]
+
+# a = max(range(len(j['annotations'])),key=lambda index:j['annotations'][index]['area'])
+# print j['annotations'][a]
+
+# b = min(range(len(j['annotations'])),key=lambda index:j['annotations'][index]['area'])
+# print j['annotations'][b]
+print 'COCO_train2014_000000000009.jpg'
+for i in j['annotations']:
+	if i['image_id']==9:
+		print i
+print'\n\n'
+print 'COCO_train2014_000000000025.jpg'
+for i in j['annotations']:
+	if i['image_id']==25:
+		print i
+print'\n\n'
+print 'COCO_train2014_000000000030.jpg'
+for i in j['annotations']:
+	if i['image_id']==30:
+		print i
+
 # res = []
 # for i in range(c):
 #  	res.append( j['categories'][i]['name'] + "   Category id: " + str(j['categories'][i]['id']) + "   Count: " + str(arr[i+1]) )
