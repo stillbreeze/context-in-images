@@ -1,12 +1,12 @@
-Context modeling of images to improve object recognition
+Understanding the role of context and global features in object recognition
 
-Dataset used: Microsoft COCO - Only a set of 5-10 objects in real, natural scenes
+Dataset used: Microsoft COCO - 90 object categories in real, natural scenes
 
 
 
 The way ahead:
 
-1. Extract low level, global feature detectors like GIST
+1. Extract low level, global feature descriptors like GIST
 
 2. Train using these features and retain contender images
 
